@@ -13,7 +13,8 @@
                   } elseif ($_GET["password"] == NULL) {
                        echo "Enter your password!";
                   } else {
-                      echo "Welcome, " . $_GET["username"] . ".";
+                      include "mysql_connect.php";
+                      mysql_login($_GET["username"], $_GET["password"]);
                   }
             ?>
             
