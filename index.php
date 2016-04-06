@@ -6,7 +6,11 @@
     </head>
 
     <body>
-        <div class="div1">
+        
+        <?php session_start(); ?>
+        <?php include "top_bar.php"; ?>
+        
+        <!-- <div class="div1">
             <form action="sign_in.php" method="get" class="form1">
                 <table>
                     <tr>
@@ -20,7 +24,8 @@
                     </tr>
                 </table>
             </form>
-        </div>
+        </div> -->
+        
     </body>
     
 </html>

@@ -66,6 +66,15 @@
                 
                 echo "Login succesful!";
                 
+                if (!session_id()) {
+                        session_start();
+                }
+                
+                
+                $_SESSION["user"] = $usr;
+                
+                header('location:index.php');
+                
             } else {
                 
                 echo "Password is incorrect! Try again!";

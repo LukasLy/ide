@@ -7,7 +7,7 @@
 
     <body>
         <div class="div1">
-            
+            <?php session_start(); ?>
             <?php if ($_GET["username"] == NULL) {
                         echo "Enter your username!";
                   } elseif ($_GET["password"] == NULL) {
