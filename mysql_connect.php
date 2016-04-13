@@ -70,9 +70,7 @@
                         session_start();
                 }
                 
-                
                 $_SESSION["user"] = $usr;
-                
                 header('location:index.php');
                 
             } else {

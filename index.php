@@ -6,10 +6,8 @@
     </head>
 
     <body>
-        
         <?php session_start(); ?>
         <?php include "top_bar.php"; ?>
-        
     </body>
     
 </html>
