@@ -6,19 +6,18 @@
     </head>
 
     <body>
-        <div class="div1">
-            <?php session_start(); ?>
-            <?php if ($_GET["username"] == NULL) {
-                        echo "Enter your username!";
-                  } elseif ($_GET["password"] == NULL) {
-                       echo "Enter your password!";
-                  } else {
-                      include "mysql_connect.php";
-                      mysql_reg($_GET["username"], $_GET["password"]);
-                  }
-            ?>
-            
-        </div>
+        <?php session_start(); ?>
+        <?php include "top_bar.php"; ?>
+        
+        <?php if ($_GET["username"] == NULL) {
+                    echo "Enter your username!";
+              } elseif ($_GET["password"] == NULL) {
+                   echo "Enter your password!";
+              } else {
+                  include "mysql_connect.php";
+                  mysql_reg($_GET["username"], $_GET["password"]);
+              }
+        ?>
     </body>
     
 </html>

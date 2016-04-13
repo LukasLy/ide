@@ -102,9 +102,22 @@
             $sql = "INSERT INTO users (username, password) VALUES ('$usr', '$psw')";
         
             if ($conn->query($sql) === TRUE) {
+                
                 echo "New user creation successful!";
+                
+                if (!session_id()) {
+                        session_start();
+                }
+                
+                
+                $_SESSION["user"] = $usr;
+                
+                header('location:index.php');
+                
             } else {
+                
                 echo "Error: " . $sql . "<br>" . $conn->error;
+                
             }
             
         } else {

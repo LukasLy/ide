@@ -7,6 +7,7 @@
 
     <body>
         <?php session_start(); ?>
+        <?php include "top_bar.php"; ?>
         
         <?php if ($_GET["username"] == NULL) {
                     echo "Enter your username!";
